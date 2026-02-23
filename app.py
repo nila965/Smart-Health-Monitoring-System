@@ -112,13 +112,13 @@ try:
         raise ValueError("Placeholders detected")
 
 except Exception:
-    st.sidebar.warning("⚠️ Using local credentials (check .streamlit/secrets.toml).")
-    CHANNEL_ID = "3254741"
-    READ_KEY = "MWO5EB4I47OZCI4W"
-    TWILIO_SID = "AC3d305967e3e0b493a29623a00409c805"
-    TWILIO_TOKEN = "1a024b986fa1d3f2f4d821fa21d325b1"
-    TWILIO_FROM = "+14155238886"
-    TO_NUMBER = "+916374930315"
+    st.sidebar.warning("⚠️ Local secrets not found. Please check .streamlit/secrets.toml.")
+    CHANNEL_ID = "" 
+    READ_KEY = ""
+    TWILIO_SID = ""
+    TWILIO_TOKEN = ""
+    TWILIO_FROM = ""
+    TO_NUMBER = ""
 
 refresh_rate = st.sidebar.slider("Refresh Rate (seconds)", 5, 60, 30)
 
